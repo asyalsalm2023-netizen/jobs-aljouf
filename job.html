@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تفاصيل الوظيفة</title>
+
+<link rel="stylesheet" href="jobs.css">
+
+<style>
+body{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+.box{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+a button{
+margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box" id="job"></div>
+
+<script>
+
+const job = JSON.parse(localStorage.getItem("selectedJob"));
+
+document.getElementById("job").innerHTML=`
+
+<h1>${job.title}</h1>
+
+<p>📍 المدينة : ${job.city}</p>
+
+<p>🎓 المؤهل : ${job.education}</p>
+
+<p>💰 الراتب : ${job.salary}</p>
+
+<a href="${job.link}" target="_blank">
+
+<button>التقديم الآن</button>
+
+</a>
+
+`;
+
+</script>
+
+</body>
+
+</html>

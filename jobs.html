@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوظائف | وظائف نساء الجوف</title>
+
+    <link rel="stylesheet" href="jobs.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">وظائف نساء الجوف</div>
+
+    <div class="menu">
+        <a href="index.html">الرئيسية</a>
+        <a href="jobs.html">الوظائف</a>
+        <a href="payment.html">الاشتراك</a>
+        <a href="admin.html">الإدارة</a>
+    </div>
+</nav>
+
+<header>
+
+    <h1>📢 أحدث الوظائف</h1>
+
+    <input type="text" id="search" placeholder="ابحث عن وظيفة...">
+
+    <div class="categories">
+        <button onclick="filterJobs('الكل')">الكل</button>
+        <button onclick="filterJobs('عسكرية')">عسكرية</button>
+        <button onclick="filterJobs('شركات')">شركات</button>
+        <button onclick="filterJobs('جدارات')">جدارات</button>
+        <button onclick="filterJobs('تمهير')">تمهير</button>
+        <button onclick="filterJobs('عن بعد')">عن بعد</button>
+    </div>
+
+</header>
+
+<div id="jobs"></div>
+
+<script src="jobs.js"></script>
+
+</body>
+</html>

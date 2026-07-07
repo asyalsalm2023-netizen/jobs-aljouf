@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QMD4JX50SD"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-QMD4JX50SD');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خدمات وظائف نساء الجوف</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<nav class="navbar">
+    <div class="logo">وظائف نساء الجوف</div>
+
+    <div class="menu">
+        <a href="index.html">الرئيسية</a>
+        <a href="jobs.html">الوظائف</a>
+        <a href="payment.html">الاشتراك</a>
+        <a href="admin.html">الإدارة</a>
+    </div>
+</nav>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        💼 وظائف نساء الجوف
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="https://whatsapp.com/channel/0029VbALbJn1NCrNrwVTGb0A" target="_blank">
+                🟢 القناة
+            </a>
+        </li>
+
+        <li>
+            <a href="payment.html">
+                💳 الدفع
+            </a>
+        </li>
+
+        <li>
+            <a href="https://wa.me/966534868414" target="_blank">
+                🟢 واتساب
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<header class="hero">
+
+    <h1>وظائف نساء الجوف</h1>
+
+    <p>خدمات إلكترونية باحترافية وسرعة في التنفيذ</p>
+
+    <a class="shop-btn"
+       href="https://whatsapp.com/channel/0029VbALbJn1NCrNrwVTGb0A"
+       target="_blank">
+
+       🟢 انضم لقناة وظائف الجوف
+
+    </a>
+
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h3>📄 سيرة ذاتية عربي + إنجليزي (ATS)</h3>
+        <p>💰 35 ريال</p>
+
+        <a class="order-btn"
+        href="https://wa.me/966534868414?text=السلام عليكم، أرغب بطلب خدمة سيرة ذاتية عربي + إنجليزي (ATS)."
+        target="_blank">
+
+        🟢 اطلب عبر واتساب
+
+        </a>
+
+    </div>
+
+    <div class="card">
+        <h3>📄 سيرة ذاتية باللغة العربية</h3>
+        <p>💰 20 ريال</p>
+
+        <a class="order-btn"
+        href="https://wa.me/966534868414?text=السلام عليكم، أرغب بطلب خدمة سيرة ذاتية باللغة العربية."
+        target="_blank">
+
+        🟢 اطلب عبر واتساب
+
+        </a>
+
+    </div>
+
+    <div class="card">
+        <h3>💼 التقديم على جدارات</h3>
+        <p>💰 20 ريال</p>
+
+        <a class="order-btn"
+        href="https://wa.me/966534868414?text=السلام عليكم، أرغب بطلب خدمة التقديم على جدارات."
+        target="_blank">
+
+        🟢 اطلب عبر واتساب
+
+        </a>
+
+    </div>
+
+    <div class="card">
+        <h3>📊 تحديث بيانات جدارات</h3>
+        <p>💰 15 ريال</p>
+
+        <a class="order-btn"
+        href="https://wa.me/966534868414?text=السلام عليكم، أرغب بطلب خدمة تحديث البيانات."
+        target="_blank">
+
+        🟢 اطلب عبر واتساب
+
+        </a>
+
+    </div>
+<div class="card">
+    <h3>💼 التقديم على الوظائف</h3>
+    <p>💰 20 ريال</p>
+
+    <a class="order-btn"
+       href="https://wa.me/966534868414?text=السلام عليكم، أرغب بطلب خدمة التقديم على الوظائف."
+       target="_blank">
+
+        🟢 اطلب عبر واتساب
+
+    </a>
+
+</div>
+
+<div class="card">
+    <h3>🏠 التقديم على سكني</h3>
+    <p>💰 40 ريال</p>
+
+    <a class="order-btn"
+       href="https://wa.me/966534868414?text=السلام عليكم، أرغب بطلب خدمة التقديم على سكني."
+       target="_blank">
+
+        🟢 اطلب عبر واتساب
+
+    </a>
+
+</div>
+
+<div class="card">
+    <h3>🎓 التقديم على تمهير</h3>
+    <p>💰 35 ريال</p>
+
+    <a class="order-btn"
+       href="https://wa.me/966534868414?text=السلام عليكم، أرغب بطلب خدمة التقديم على تمهير."
+       target="_blank">
+
+        🟢 اطلب عبر واتساب
+
+    </a>
+
+</div>
+</div>
+<script>
+document.querySelectorAll(".order-btn").forEach(btn => {
+    btn.addEventListener("click", async function (e) {
+
+        e.preventDefault();
+
+        const service = this.parentElement.querySelector("h3").innerText;
+        const whatsappLink = this.href;
+
+        try {
+            await fetch("/api/telegram", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    service: service
+                })
+            });
+        } catch (e) {
+            console.log(e);
+        }
+
+        window.open(whatsappLink, "_blank");
+    });
+});
+</script>
